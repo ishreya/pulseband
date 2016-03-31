@@ -1,0 +1,575 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #EDEDED;
+}
+
+
+p {
+	font-family: 'ITC Avant Garde Gothic Book', sans-serif;
+	color: #666666;
+	line-height: 150%;
+
+}
+
+/***keeps tabs selected consistent****/
+a:visited {
+	text-decoration: none;
+    color: inherit;
+}
+
+.clearfix:after{
+	/*display: table;
+	content: '';*/
+	clear: both;
+}
+
+
+/***BACKGROUND IMAGE OF MAN RUNNING*****/
+header{
+	height: 100vh;
+	width: 100%;
+	background: url(../img/PB-oldmanrunning.jpg) no-repeat center center fixed;	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-bottom: -100px;
+}
+
+.logo {
+	float: left;
+	z-index: 200;
+	cursor: pointer;
+}
+
+.logo img {
+	padding-top: 10px;
+	padding-left: 20px;
+	max-height: 40px;
+}
+
+/***********HOME SCREEN****************/
+.welcome {
+	height: 100px;
+	text-align: center;
+	padding-top: 300px;
+}
+
+.welcome h1{
+	padding-bottom: 200px;
+	color: white;
+}
+
+h1 {
+	font-family: 'ITC Avant Garde Gothic Demi', Arial, sans-serif;
+	font-style: oblique;
+	font-size: 45px;
+	padding-bottom: 50px;
+	color: #0C1F43;
+}
+
+.welcome a.explore, a.button{
+	font-family: 'ITC Avant Garde Gothic Demi', Arial, sans-serif;
+	display: block;
+	font-size: 20px;
+	color: #fff;
+	padding: 20px 56px;
+	max-width: 500px;
+	text-decoration: none;
+	text-align: center;
+	margin: 0 auto;
+	font-weight: 400;
+	letter-spacing: 3px;
+	border: 1px solid #ccc;
+}
+
+.welcome a.explore:hover{
+	color: #fff;
+	border: 5px #ccc;	
+}
+/*************End of Home screen text**********/
+
+
+/*************NAVIGATION BAR LAYOUT*************/
+.navigation{
+	float: right;
+	display: inline-block;
+	font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+.top_bar {
+	position: fixed;
+	background-color: #0C1F43;
+	z-index: 100;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	width: 100%;
+	box-shadow: 0 2px 3px rgba(0,0,0, 0.4);
+}
+
+.navigation ul li {
+	display: inline-block;
+	margin-right: 50px;
+	height: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.navigation ul li a {
+	color: #f68906;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.navigation ul li a:hover {
+	color: white;
+}
+/************END OF NAV BAR LAYOUT***************/
+
+.main {
+	width: 95%;
+	padding: 110px 50px 50px;
+}
+
+/************Side Bar Navigation***************/
+.features {
+    min-height: 60vh;
+    padding: 50px 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+	display: block;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 1px #888888;
+	overflow: hidden;
+}
+
+.fpadding {
+	padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 150px;
+}
+
+.side-nav {
+	font-family: 'ITC Avant Garde Gothic', sans-serif;
+	font-size: 1em;
+}
+
+.side-nav ul {
+	margin-left: 1em;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+    margin-bottom: 2em;
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    text-decoration: none;
+}
+
+.side-nav ul li a {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	text-align: right;
+	text-decoration: none;
+}
+
+.side-nav ul li a:hover {
+	color: #f68906;
+}
+
+
+.active {
+	border-right: 5px solid #f68906;
+	color: #f68906;
+}
+
+.side-nav ul li {
+	text-decoration: none;
+	padding-right: 15px;
+	list-style: none;
+}
+
+.side-nav {
+	position: fixed;
+	opacity: 0;
+}
+
+.main {
+	position: relative;
+}
+
+.side-nav {
+	margin: 0;
+    left: 20px;
+    top: 200px;
+    z-index: 150;
+    display: inline-block;
+}
+
+.side-nav li {
+	font-family: 'ITC Avant Garde Gothic Book', Arial, sans-serif;
+	font-size: 16px;
+	padding-bottom: 10px;
+	list-style: none;
+}
+
+.side-nav-scrolled {
+	position: fixed;
+	width: 100%;
+	list-style: none;
+}
+/*******************End of Side Nav Bar*******************/
+
+/*.responsive-menu {
+	display: none;
+}*/
+
+/*@media screen and (max-width: 1100px)
+{ .menu-btn span {
+    display: block;
+    width: 19px;
+    height: 3px;
+    margin: 4px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px)
+{ .menu-btn {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    margin: 0;
+}*/
+
+/******END OF Side Bar Navigation*********/
+
+.row {
+	display: block;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+.hfacts {
+	min-width: 300px;
+	position: relative;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: right;
+	display: block;
+	min-width: 200px;
+	overflow: hidden;
+	padding-left: 200px;
+}
+
+.hfacts p{
+	font-family: 'ITC Avant Garde Gothic Book', Arial, sans-serif;
+	font-size: 16px;
+	padding-right: 20px;
+}
+
+.hfacts img {
+	max-height:30px;
+	margin-top: 10px;
+}
+/****************FEATURES styling**********************/
+.features h3{
+	font-family: 'ITC Avant Garde Gothic Demi', Arial, sans-serif;
+	font-size: 24px;
+	color: #0C1F43;
+}
+
+.features p {
+	font-family: 'ITC Avant Garde Gothic Book', sans-serif;
+	font-size: 16px;
+	color: #666666;
+}
+/****************END of FEATURES styling*************/
+
+/**********************PRODUCT*******************/
+#product {
+	overflow: hidden;
+}
+
+.productsection img {
+	max-width: 400px;
+	overflow: hidden;
+}
+
+.productsection p {
+	margin-left: 50px;
+	min-width: 200px;
+	max-width: 300px;
+	text-align: left;
+}
+/*******************END of PRODUCT*******************/
+
+/*********************USER BENEFITS***********************/
+
+#benefits {
+	overflow: hidden;
+}
+
+#benefits img {
+	max-height: 100px;
+	padding-right: 50px;
+}
+
+
+.progress, .reminders, .detection{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.benefitstext {
+	display: block;
+	min-width: 250px;
+	max-width: 500px;
+}
+
+/**********************END of USER BENEFITS****************/
+
+/************************IPHONE APP****************************/
+#iphoneapp {
+	position: relative;
+	overflow: hidden;
+}
+
+.appgif {
+	position: relative;
+	float: left;
+	max-width: 300px;
+}
+
+.appdetails {
+	background-color: red;
+}
+
+.appsummary img {
+	display: inline-block;
+	max-height: 50px;
+	position: relative;
+	top: 15px;
+	margin-right: 30px;
+}
+
+.appsummary li {
+	margin-top: 20px;
+	min-width: 300px;
+	text-align: left;
+}
+
+.appsummary li h3:hover {
+	color: #2A7CF3;
+	cursor: pointer;
+}
+
+/************************END OF IPHONE APP***********************/
+
+
+/************************SPECS ***********************/
+#specs img {
+	display: inline-block;
+	max-height: 400px;
+	max-width: 400px;
+	overflow: hidden;
+	float: right;
+}
+
+#specs {
+	display: block;
+	overflow: hidden;
+}
+
+#specs ul {
+	padding-bottom: 50px;
+}
+
+#specs ul li {
+	line-height: 150%;
+}
+
+#specs .specstext {
+	width: 40%;
+	min-width: 200px;
+}
+/************************END OF SPECS***********************/
+
+/************************CUSTOMER REVIEWS***********************/
+#reviews {
+	overflow: hidden;
+}
+
+#reviews img {
+	width: 100%;
+}
+/********************END OFCUSTOMER REVIEWS***********************/
+
+/*******************BUY NOW******************************/
+
+#buynow {
+	overflow: hidden;
+}
+
+.option1, .option2 {
+	margin: 50px;
+	padding: 50px;
+	max-width: 350px;
+}
+
+.option1 li, .option2 li {
+	font-family: 'ITC Avant Garde Gothic Book', Arial, sans-serif;
+	font-size: 20px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	color: #666666;
+	display: block;
+}
+
+h2 {
+	font-family: 'ITC Avant Garde Gothic Demi', Arial, sans-serif;
+	font-size: 40px;
+}
+
+.buynow a{
+	color: #0C1F43;
+}
+
+li a.button {
+	font-family: 'ITC Avant Garde Gothic', Arial, sans-serif;
+	display: inline-block;
+	font-size: 20px;
+	max-width: 300px;
+	margin
+	text-decoration: none;
+	margin: 0;
+	font-weight: 400;
+	border: 2px solid #0C1F43;
+	background-color: #0C1F43;
+	color: #fff;
+	padding: 50;
+	border-radius: 25px;
+}
+
+li a:hover {
+	color: #f68906;
+}
+
+/*******************End of BUY NOW**********************/
+
+/**************************/
+.contact {
+	background-color: #AAAAAA;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+ul.social li{
+	position: relative;
+	vertical-align: top;
+	padding-right: 10px
+}
+ 
+ul.social li:last-child{
+	margin-right: 0;
+}
+
+.social img {
+	display: block;
+	max-height: 30px;
+	padding-right: 20px;
+	float: left;
+}
+.social li a.button {
+	font-family: 'ITC Avant Garde Gothic', Arial, sans-serif;
+	display: inline-block;
+	font-size: 20px;
+	max-width: 300px;
+	margin
+	text-decoration: none;
+	margin: 0;
+	letter-spacing: 2px;
+	font-weight: 400;
+	border: 2px solid #000;
+	padding: 50;
+	border-radius: 25px;
+	background-color: #000;
+}
+/**********CONTACT**************/
+
+/*******FOOOTER*********/
+.copyright{
+	padding: 30px 0;
+	background-color: #0C1F43;
+	height: 60px;
+	text-align: center;
+}
+
+.copyright li {
+	font-family: 'Droid Serif', serif;
+	font-size: 10px;
+	color: white;
+}
+
+.cpinfo ul {
+	float: left;
+	display: block;
+}
+
+.cpinfo ul li img {
+	max-height: 20px;
+}
+
+.cpinfo ul li {
+	display: inline-block;
+	padding-left: 50px;
+	padding-right: 50px;
+	float: right;
+	cursor: pointer;
+}
+/*******END OF FOOOTER*********/
+
+@media (max-width: 600px) {
+  	
+  	.features {
+  		width: 100%;
+  	}
+
+  	.fpadding {
+  		padding: 0;
+  	}
+
+  	.side-nav{
+  		opacity: 0;
+  	}
+
+  	.benefitstext {
+  		display: block;
+  	}
+
+}
+
